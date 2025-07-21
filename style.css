@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --barbie-pink: #ff69b4;
+  --dark-bg: #1c2630;
+  --form-bg: #2e3a4b;
+  --text-light: #fff;
+  --text-muted: #aaa;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8c8dc, #ffe5ec);
+}
+
+form {
+  background: var(--form-bg);
+  padding: 50px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+form h2 {
+  color: var(--text-light);
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.inputBox {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--text-muted);
+  color: var(--text-light);
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputBox label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.9em;
+  pointer-events: none;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+.inputBox input:focus + label,
+.inputBox input:valid + label {
+  top: -15px;
+  font-size: 0.75em;
+  color: var(--barbie-pink);
+}
+
+.inputBox input[type="submit"] {
+  background: var(--barbie-pink);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.inputBox input[type="submit"]:hover {
+  background: #ff85c1;
+  letter-spacing: 1px;
+}
+
+form p {
+  color: var(--text-light);
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+form p a {
+  color: var(--barbie-pink);
+  text-decoration: none;
+  font-weight: 500;
+}
